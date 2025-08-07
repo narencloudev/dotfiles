@@ -1,6 +1,5 @@
-1. ✅ A `README.md` with full usage instructions
-2. ✅ A `setup.sh` script to install your dotfiles via Stow
-3. ✅ A `backup.sh` script to back up existing configs before symlinking
+✅ A `setup.sh` script to install your dotfiles via Stow
+✅ A `backup.sh` script to back up existing configs before symlinking
 
 ---
 
