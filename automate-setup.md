@@ -1,24 +1,27 @@
-✅ Let’s Create the Ideal Workflow
-🧱 Your Setup Includes:
+✅ Got it! You're asking for a **one-shot setup** process:
 
-    Zsh + Oh My Zsh + Plugins (zsh-autosuggestions, zsh-syntax-highlighting)
+> Clone your `~/.dotfiles` repo ➜ Stow everything ➜ Install all related plugins, tools, and configs ➜ One command, and **your full environment is restored and ready to use**.
 
-    Tmux + Plugins (via TPM)
+---
 
-    Neovim (LazyVim + Mason packages + plugins)
+## ✅ Let’s Create the Ideal Workflow
 
-    WezTerm
+### 🧱 Your Setup Includes:
 
-    Starship
+* **Zsh** + Oh My Zsh + Plugins (`zsh-autosuggestions`, `zsh-syntax-highlighting`)
+* **Tmux** + Plugins (via TPM)
+* **Neovim** (LazyVim + Mason packages + plugins)
+* **WezTerm**
+* **Starship**
+* **Fonts** (Nerd Fonts)
+* **GNU Stow** structure
+* **Tiling WM** (optional: i3/Hyprland if needed)
 
-    Fonts (Nerd Fonts)
+---
 
-    GNU Stow structure
+## 🛠️ 1. Scaffold Repo Structure (already done)
 
-    Tiling WM (optional: i3/Hyprland if needed)
-
-🛠️ 1. Scaffold Repo Structure (already done)
-
+```bash
 ~/.dotfiles/
 ├── zsh/.zshrc
 ├── nvim/.config/nvim/      ← LazyVim
@@ -27,11 +30,15 @@
 ├── starship/.config/starship.toml
 ├── fonts/.local/share/fonts/
 └── install.sh
+```
 
-🧩 2. Final install.sh Script (🔥 Fully Automatic)
+---
 
-Here's your one-click setup installer script:
+## 🧩 2. Final `install.sh` Script (🔥 Fully Automatic)
 
+Here's your **one-click setup** installer script:
+
+```bash
 #!/usr/bin/env bash
 
 set -e
@@ -89,9 +96,13 @@ echo "🧩 Installing Mason packages..."
 nvim --headless "+MasonInstall angular-language-server bash-language-server prettier eslint-lsp lua-language-server" +qa || true
 
 echo "✅ All set! Please restart your terminal to apply Zsh and Starship."
+```
 
-🧬 3. GitHub Clone & Run Instructions
+---
 
+## 🧬 3. GitHub Clone & Run Instructions
+
+```bash
 # 1. Clone your dotfiles repo
 git clone https://github.com/narencloudev/dotfiles.git ~/.dotfiles
 
@@ -99,8 +110,11 @@ git clone https://github.com/narencloudev/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 chmod +x install.sh
 ./install.sh
+```
 
-✅ Final Features Recap
+---
+
+## ✅ Final Features Recap
 
 ✔ Installs Zsh, Starship, Neovim, Tmux, WezTerm
 ✔ Stows your configs into place
@@ -108,4 +122,14 @@ chmod +x install.sh
 ✔ Syncs LazyVim plugins
 ✔ Installs Mason packages
 ✔ Installs Nerd Fonts
-✔ Everything works in one step
+✔ Everything works in **one step**
+
+---
+
+Would you like me to:
+
+* Add i3/Hyprland setup if you're using one?
+* Add a backup script (`backup.sh`)?
+* Add `.desktop` autostart for terminal or wm?
+
+Let me know — we can make this the ultimate recovery script for any system.
