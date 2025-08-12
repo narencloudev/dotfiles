@@ -70,9 +70,10 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# Oh My Zsh settings
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting history)
+plugins=(git)
+
 source $ZSH/oh-my-zsh.sh
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -101,12 +102,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
+#
 # Better ls
 alias ls="eza --all --icons=always"
-
-# Initialize zoxide
 eval "$(zoxide init zsh)"
-
-# Starship prompt initialization
 eval "$(starship init zsh)"
+
+# Enable syntax highlighting
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Enable autosuggestions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
