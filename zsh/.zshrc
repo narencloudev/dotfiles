@@ -106,7 +106,16 @@ source $ZSH/oh-my-zsh.sh
 # Better ls
 alias ls="eza --all --icons=always"
 eval "$(zoxide init zsh)"
+
+# Auto-start tmux if not already inside tmux
+#if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
+#    tmux new-session -A -s main
+#fi
+
 eval "$(starship init zsh)"
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 
 # Enable syntax highlighting
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
