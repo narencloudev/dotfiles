@@ -1,0 +1,32 @@
+# macOS
+.DS_Store
+
+# Vim / Neovim
+*.swp
+*.swo
+*~
+
+# Zsh cache
+.zcompdump*
+.zsh_history
+
+# Local tmux state
+.tmux/resurrect/
+.tmux/continuum/
+
+# Logs
+*.log
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Temporary files
+tmp/
+.cache/
+
+# Fonts archives
+*.zip
+
+# OS files
+Thumbs.db
