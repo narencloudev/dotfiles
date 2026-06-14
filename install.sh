@@ -16,7 +16,8 @@ tmux
 neovim 
 fzf 
 zoxide 
-eza
+eza 
+kitty
 
 echo "==> Installing Starship"
 
@@ -69,6 +70,28 @@ https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.zip
 unzip -o /tmp/meslo.zip -d ~/.local/share/fonts >/dev/null
 
 fc-cache -fv >/dev/null
+
+# =========================
+# 👉 KITTY ADDITION START
+# =========================
+
+echo "==> Installing Kitty Gruvbox theme"
+
+mkdir -p ~/.config/kitty/themes
+
+if [ ! -f ~/.config/kitty/themes/gruvbox_dark.conf ]; then
+git clone https://github.com/dexpota/kitty-themes /tmp/kitty-themes
+cp /tmp/kitty-themes/themes/gruvbox_dark.conf ~/.config/kitty/themes/
+rm -rf /tmp/kitty-themes
+fi
+
+mkdir -p ~/.config/kitty
+
+ln -sf "$REPO_DIR/.config/kitty" ~/.config/kitty
+
+# =========================
+# 👉 KITTY ADDITION END
+# =========================
 
 echo "==> Creating config folders"
 
